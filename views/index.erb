@@ -1,8 +1,18 @@
 <html>
-  <head></head>
-  <body>
+<head>
+</head>
+<body>
+  <form action="/" method="post">
+    <input type='text' name='guess' />
+    <input type='submit' value='Guess!' />
     <p>
       The SECRET NUMBER is <%= number %>
     </p>
-  </body>
+    <% if defined?(guess) %>
+    <p>
+      Your last guess was <%= guess %> and it is <%= feedback %>.
+    </p>
+    <% end %>
+  </form>
+</body>
 </html>
